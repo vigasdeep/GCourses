@@ -84,20 +84,18 @@ width:200px;
 		//		'checked'     => TRUE,
 		'style'       => 'margin:10px',
 	);
-
-	if(isset($form['accomodation_required'])){
-		if($form['accomodation_required'] == "0") $data0['checked'] = TRUE;
-		$data1 = array(
+	$data1 = array(
 			'name'        => 'accomodation_required',
 			'id'          => 'newsletter',
 			'value'       => '1',
 			'style'       => 'margin:10px; margin-left:30px;',
 		);
 
+
+	if(isset($form['accomodation_required'])){
+		if($form['accomodation_required'] == "0") $data0['checked'] = TRUE;
+	
 		if($form['accomodation_required'] == "1") $data1['checked'] = TRUE;
-	}else{
-		$data1="";
-		$data0="";
 	}
 	echo form_label('Accomodation Required:', ' ');
 	echo form_radio($data0). "No ";
