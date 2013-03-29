@@ -1,0 +1,456 @@
+@import url(http://fonts.googleapis.com/css?family=Economica:400,700);
+@import url(http://fonts.googleapis.com/css?family=Voces);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+
+@font-face {
+	font-family: 'GentiumBasicRegular';
+	src: url('GenBasR.eot');
+	src: local('Gentium Basic'), local('GentiumBasic'), url('GenBasR.woff') format('woff'), url('GenBasR.ttf') format('truetype'), url('GenBasR.svg#GentiumBasic') format('svg');
+}
+
+body{
+margin:0px;
+padding:0px;
+background:#f1f1f1;
+font-family:'Voces';
+margin-top:70px;
+}
+
+.topBar{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+min-width:1000px;
+height:35px;
+background: #F0FFE6;
+/*-moz-box-shadow: 0 1px 5px #333;
+-webkit-box-shadow: 0 1px 5px #333;
+background: -webkit-gradient(linear, left top, left bottom, from(#3d3d3d), to(#252525));
+background: -moz-linear-gradient(top, #3d3d3d, #252525);*/
+border-bottom: 1px #3E9C00 solid;
+}
+
+.topNavBar{
+position:absolute;
+top:40px;
+left:0px;
+width:100%;
+min-width:1000px;
+height:30px;
+background: #3E9C00;
+-moz-box-shadow: 1px 1px 2px #333;
+-webkit-box-shadow: 1px 1px 2px #333;
+background: -webkit-gradient(linear, left top, left bottom, from(#13AD02), to(#0D8500));
+	background: -moz-linear-gradient(top, #ccc, #999);
+}
+
+
+.ui-autocomplete{
+width:200px; !important
+list-style-type:none;!important
+}
+
+.ui-autocomplete li{
+	list-style-type:none;
+	border:1px solid #ccc;
+	background:#666;
+	cursor:pointer;
+	padding-left:5px;
+}
+
+.topBar .logo {
+float:left;
+padding-top:10px;
+display:inline-block;
+padding-left:5px;
+color: #3E9C00;
+font-family: 'GentiumBasicRegular';
+font-size:32px;
+text-shadow: 2px 0px 0px white;
+cursor:pointer;
+font-weight: bold;
+}
+
+.topBar .logo a{
+	color: #3E9C00;
+	text-decoration:none;
+}
+
+.top960{
+width:990px; 
+margin:auto;
+/*padding-left:10px;
+padding-right:10px;*/
+}
+
+.top960 ul li a{
+	color:white;
+	text-decoration:none;
+}
+.top960 ul li a:hover{
+	color:green;
+	text-decoration:none;
+}
+
+.searchBox{
+float:right;
+padding-top:5px;
+margin-left:5px;
+width:475px;
+}
+
+.searchBox span{
+	float:right;
+	padding-top:3px;
+}
+.searchBox form{
+	float:right;
+}
+
+.searchBox #searchField{
+border:0px;
+margin:0px;
+height:22px;
+float:left;
+border: 1px #ccc solid;
+border-right:none;
+text-indent:5px;
+color:#CCC;
+width:230px;
+}
+
+.searchBox #searchSubmit{
+border:0px;
+margin:0px;
+height:24px;
+float:left;
+padding-left:15px;
+padding-right:15px;
+font-weight:bold;
+color: #3E9C00;
+background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#ccc));
+background: -moz-linear-gradient(top, #f1f1f1, #ccc);
+border: 1px #ccc solid;
+border-left:none;
+/*-webkit-border-top-right-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;*/
+}
+
+.loginButton , .loggedButton{
+float:right;
+cursor:pointer;
+
+}
+
+.loginButton div{
+	height: 25px;
+font-size: 13px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+color:white;
+margin-left:2px;
+background: -webkit-gradient(linear, left top, left bottom, from(#13AD02), to(#0A6B00));
+background: -moz-linear-gradient(top, #13AD02, #0A6B00);
+-webkit-transition: background 400ms ease, color 400ms ease;
+-moz-transition: background 400ms ease, color 400ms ease;
+-ms-transition: background 400ms ease, color 400ms ease;
+-o-transition: background 400ms ease, color 400ms ease;
+transition: background 400ms ease, color 400ms ease;
+}
+
+.loginButton div:hover{
+		background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#e1e1e1));
+	background: -moz-linear-gradient(top, #f9f9f9, #e1e1e1);
+	color:#3E9C00;
+}
+
+
+.loggedButton{
+cursor:auto;
+
+}
+
+
+.loggedButton div{
+	height:23px;
+	font-size:13px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	color: white;
+	background: transparent;
+}
+
+
+.topNavBar ul{
+	list-style:none;
+}
+
+.topNavBar li{
+	list-style:none;
+	float:left;
+	height: 25px;
+font-size: 13px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+color:white;
+margin-right:2px;
+background: -webkit-gradient(linear, left top, left bottom, from(#13AD02), to(#0A6B00));
+background: -moz-linear-gradient(top, #13AD02, #0A6B00);
+-webkit-transition: background 400ms ease, color 400ms ease;
+-moz-transition: background 400ms ease, color 400ms ease;
+-ms-transition: background 400ms ease, color 400ms ease;
+-o-transition: background 400ms ease, color 400ms ease;
+transition: background 400ms ease, color 400ms ease;
+}
+
+.topNavBar li:hover{
+	background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#e1e1e1));
+	background: -moz-linear-gradient(top, #f9f9f9, #e1e1e1);
+	color:#3E9C00;
+}
+
+.mainBody{
+
+	width:980px;
+	height:auto;
+	margin:auto;
+	margin-top:50px;
+	padding-left:10px;
+	padding-right:10px;
+	
+}
+
+.mainLeft{
+float:left;
+width:600px;
+}
+
+.mainLeft h1 {
+	color:#333;
+	margin:0px;
+	padding:0px;
+	font-family:'Raleway';
+	text-shadow: 1px 1px -1px white;
+}
+
+.mainRight{
+float:right;
+width:340px;
+}
+
+.companyBox{
+	-webkit-border-radius: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	background: -webkit-linear-gradient(top,white 0,#DDD 100%);
+	border: 1px #ccc solid;
+	height:155px;
+	width:100%;
+}
+
+.companyBox .logo{
+
+	font-size:11px;
+	float:left;
+	margin-right: 15px;
+}
+
+.companyBox .logo img {
+	width:125px;
+	height:125px;
+	margin-top:15px;
+	margin-left:15px;
+	-webkit-border-radius: 15px;
+}
+
+.companyBox .companyDetails{
+	margin-top:15px;
+	padding-left:15px;
+	padding-left:15px;
+	float:left;
+	width:200px;
+	height:125px;
+	font-size: 12px;
+	border-left: 1px #ccc solid;
+}
+
+.companyBox .companyRating{
+	margin-top:15px;
+	padding-left:15px;
+	padding-left:15px;
+	float:right;
+	width:200px;
+	height:125px;
+	font-size: 12px;
+	border-left: 1px #ccc solid;
+}
+
+.whatsNew {
+	height:400px;
+	width:100%;
+	margin-top:21px;
+	font-size:12px;
+}
+
+.whatsNew h3 {
+	color:#333;
+	margin:0px;
+	padding:0px;
+	font-family:'Raleway';
+	font-size:15px;
+}
+
+.whatsNew ul {
+	list-style:none;
+}
+
+.whatsNew li {
+	margin-bottom:5px;
+}
+
+.productList{
+	-webkit-border-radius: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	background: -webkit-linear-gradient(top,white 0,#DDD 100%);
+	border: 1px #ccc solid;
+	height:100px;
+	width:587px;
+	padding-left:13px;
+}
+
+.siteSlider{
+	width:98%;
+	height:200px;
+	padding:1%;
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f1f1f1));
+background: -moz-linear-gradient(top, #fff, #f1f1f1);
+-webkit-border-bottom-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom:1px #ccc solid;
+}
+
+.sliderBox{
+	background:#F0FFE6;
+	width:33%;
+	height:200px;
+}
+
+.leftBox{
+	float:left;
+	-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-left-radius: 10px;
+}
+
+.centerBox{
+	float:left;
+	margin-left:5px;
+}
+
+.rightBox{
+	float:right;
+	-webkit-border-bottom-right-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+border-bottom-right-radius: 10px;
+background: url('../images/bookingSlider.jpg');
+background-size:313px 200px;
+overflow: hidden;
+position:relative;
+
+}
+
+.rightBox h2{
+	position: absolute;
+	top:0px;
+	left:0px;
+	color:white;
+	width:100%;
+	padding:10px 0px 10px 0px;
+	text-shadow: 1px 1px 0px #3E9C00;
+}
+
+.rightBox #bookBg{
+	background:black;
+	opacity:0.7;
+}
+
+.rightBox div{
+	float:right;
+	color:white;
+	font-size:20px;
+	margin-top:110px;
+	text-align:right;
+	width:100%;
+}
+
+.rightBox span{
+	font-weight:bold;
+	font-size:28px;
+	display:inline-block;
+	width:100%;
+	margin-top:5px;
+	padding:10px;
+	background:white;
+	float:right;
+	color: black;
+}
+.rightBox em{
+	display:inline-block;
+	margin-right:10px;
+}
+
+
+.rightBox , .rightBox *{
+	cursor:pointer;
+
+}
+
+
+/*
+FIELD NAME RED on validation failing.
+
+*/
+.fieldname {
+	color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
