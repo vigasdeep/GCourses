@@ -186,7 +186,7 @@ margin: 0 auto;
 				$opts = "";
 				$zid = "";
 				if($data['route'] == "basic"){
-					$courses = $this->member_model->selectUserData('courses',0,NULL,0);
+					$courses = $this->member_model->selectUserData('courses',0,NULL,0, 3, 4);
 					foreach($courses as $course){
 						$crs[$course['course_id']] = $course['course_name'];
 					}
@@ -247,7 +247,7 @@ margin: 0 auto;
 		else {$data['route'] = "";}
 				$table = $this->find_route($data['route']);
 			if($table != "no"){
-				$userData = $this->member_model->selectUserData($table,'','',0);
+				$userData = $this->member_model->selectUserData($table,'','',0, 3, 4);
 				if($userData != FALSE )
 					$data['userData'] = $userData;
 				$basicElementView=$this->findTableHead($data['route'],$data['admin']);
@@ -260,7 +260,7 @@ margin: 0 auto;
 
 						$this->table->add_row($row[$smallElements[1]],$row[$smallElements[2]],$row[$smallElements[3]],$row[$smallElements[4]],$row[$smallElements[5]]);
 						}else{
-						$this->table->add_row('<a href="'.site_url('member/basicInfo/courses/'.$row[$smallElements[0]]).'">Edit</a>',$row[$smallElements[1]],$row[$smallElements[2]],$row[$smallElements[3]],$row[$smallElements[4]],$row[$smallElements[5]]);
+						$this->table->add_row('<a href="'.site_url('member/basicInfo/courses/'.$row[$smallElements[0]]).'">Edit</a>',$row[$smallElements[1]],$row[$smallElements[2]],$row[$smallElements[3]],$row[$smallElements[4]],$row[$smallElements[5]], '<a href="'.site_url('member/viewStudents/'.$row[$smallElements[0]]).'">View Students</a>');
 						}
 					}
 				}else {}
@@ -342,6 +342,31 @@ margin: 0 auto;
 		$data['admin'] = $checkLoggedIn->admin;
 		return $data;
 	}
+
+	public function viewStudents($course = null)
+	{
+		//Lets show them the students.
+		$this->load->model('member_model');
+		$checkLoggedIn = $this->member_model->checkLoggedIn();
+		if(($checkLoggedIn == false)){
+			$this->load->view('user/login');
+		}
+		else
+		{
+			$data = $this->assignSessionToData($checkLoggedIn);
+			$this->db->select('*');
+			$this->db->from('studentRegister');
+			$this->db->join('courses', 'courses.course_id = studentRegister.course');
+			$this->db->join('branches','branches.branch_id = studentRegister.course');
+			$this->db->where('course_id', $course);
+			$query = $this->db->get();
+			$data['students'] = $query->result();
+			$this->load->view('member/header',$data);
+			$this->load->view('functions', $data);
+			$this->load->view('studentregister', $data);
+		}
+
+	}	
 
 
 }

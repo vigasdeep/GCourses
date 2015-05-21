@@ -64,10 +64,10 @@ class Member_model extends CI_Model {
 		
 	}
 
-	function selectUserData($table,$id=0,$where_col='id',$single=1){
+	function selectUserData($table, $id=0,$where_col='id',$single=1, $limit=null, $offset=null){
 		$this->load->database();
 		if($id == 0){
-			$query = $this->db->get($table);
+			$query = $this->db->get($table, $limit, $offset);
 		}else{		
 			$query = $this->db->get_where($table, array($where_col => $id));
 		}
